@@ -1,0 +1,8 @@
+# 行尾符处理
+* text=auto
+*.sh text eol=lf
+
+# 二进制文件
+*.jpg binary
+*.png binary
+*.pdf binary
