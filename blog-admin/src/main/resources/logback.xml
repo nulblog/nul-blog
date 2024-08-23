@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- 日志存放路径 -->
-	<property name="log.path" value="/home/nul-blog/logs" />
+	<property name="log.path" value="/home/nulblog/logs" />
     <!-- 日志输出格式 -->
 	<property name="log.pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{20} - [%method,%line] - %msg%n" />
 
@@ -14,11 +14,11 @@
 	
 	<!-- 系统日志输出 -->
 	<appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log.path}/info.log</file>
+	    <file>${log.path}/nul-info.log</file>
         <!-- 循环政策：基于时间创建日志文件 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 日志文件名格式 -->
-			<fileNamePattern>${log.path}/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>${log.path}/nul-info.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<!-- 日志最大的历史 60天 -->
 			<maxHistory>60</maxHistory>
 		</rollingPolicy>
@@ -36,11 +36,11 @@
 	</appender>
 	
 	<appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log.path}/error.log</file>
+	    <file>${log.path}/nul-error.log</file>
         <!-- 循环政策：基于时间创建日志文件 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 日志文件名格式 -->
-            <fileNamePattern>${log.path}/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${log.path}/nul-error.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<!-- 日志最大的历史 60天 -->
 			<maxHistory>60</maxHistory>
         </rollingPolicy>
@@ -58,11 +58,11 @@
     </appender>
 	
 	<!-- 用户访问日志输出  -->
-    <appender name="user" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${log.path}/user.log</file>
+    <appender name="nul-user" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.path}/nul-user.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
-            <fileNamePattern>${log.path}/user.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${log.path}/nul-user.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- 日志最大的历史 60天 -->
             <maxHistory>60</maxHistory>
         </rollingPolicy>
@@ -87,7 +87,7 @@
     </root>
 	
 	<!--系统用户操作日志-->
-    <logger name="user" level="info">
-        <appender-ref ref="user"/>
+    <logger name="nul-user" level="info">
+        <appender-ref ref="nul-user"/>
     </logger>
 </configuration> 
