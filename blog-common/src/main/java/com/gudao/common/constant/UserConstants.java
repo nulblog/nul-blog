@@ -7,7 +7,7 @@ public class UserConstants {
     /**
      * 平台内系统用户的唯一标志
      */
-    public static final String SYS_USER = "USER";
+    public static final String USER = "USER";
 
     /**
      * 正常状态
