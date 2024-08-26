@@ -80,7 +80,7 @@ public class ConfigServiceImpl implements IConfigService {
      */
     @Override
     public boolean selectCaptchaEnabled() {
-        String captchaEnabled = selectConfigByKey("sys.account.captchaEnabled");
+        String captchaEnabled = selectConfigByKey("account.captchaEnabled");
         if (StringChangeUtils.isEmpty(captchaEnabled)) {
             return true;
         }

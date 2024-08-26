@@ -44,7 +44,8 @@ spring:
   # 资源信息
   messages:
     # 国际化资源文件路径
-    basename: i18n/messages
+    basename: i18n.messages
+    encoding: utf-8
   # 数据源配置
   profiles:
     active: druid

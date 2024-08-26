@@ -1,4 +1,4 @@
-package com.gudao.web.controller.core;
+package com.gudao.web.controller;
 
 import com.gudao.common.constant.Constants;
 import com.gudao.common.core.domain.AjaxResult;
@@ -42,8 +42,7 @@ public class UserLoginController {
     public AjaxResult login(@RequestBody LoginBody loginBody) {
         AjaxResult ajax = AjaxResult.success();
         // 生成令牌
-        String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(),
-                loginBody.getUuid());
+        String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(), loginBody.getUuid());
         ajax.put(Constants.TOKEN, token);
         return ajax;
     }
