@@ -52,7 +52,7 @@ public class UserLoginController {
      *
      * @return 用户信息
      */
-    @GetMapping("getInfo")
+    @GetMapping("/getInfo")
     public AjaxResult getInfo() {
         User user = SecurityUtils.getLoginUser().getUser();
         // 角色集合
@@ -71,7 +71,7 @@ public class UserLoginController {
      *
      * @return 路由信息
      */
-    @GetMapping("getRouters")
+    @GetMapping("/getRouters")
     public AjaxResult getRouters() {
         Long userId = SecurityUtils.getUserId();
         List<Menu> menus = menuService.selectMenuTreeByUserId(userId);
