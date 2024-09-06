@@ -38,6 +38,11 @@ public class PasswordService {
         return CacheConstants.PWD_ERR_CNT_KEY + username;
     }
 
+    /**
+     * 验证用户信息失败次数
+     *
+     * @param user 用户
+     */
     public void validate(User user) {
         Authentication usernamePasswordAuthenticationToken = AuthenticationContextHolder.getContext();
         String username = usernamePasswordAuthenticationToken.getName();
