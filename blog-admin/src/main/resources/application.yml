@@ -56,6 +56,12 @@ spring:
       max-file-size: 10MB
       # 设置总上传的文件大小
       max-request-size: 20MB
+  # redis配置
+  redis:
+    host: 127.0.0.1         # Redis服务器地址
+    port: 6379              # Redis端口号
+    password:
+    database: 2
 
 # token配置
 token:
